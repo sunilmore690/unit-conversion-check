@@ -1,0 +1,26 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.circleBase {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #fff;
+  line-height: 100px;
+  text-align: center;
+  margin-left: 100px;
+  margin-top: 100px;
+}
+
+.danger {
+  background: #c9302c;
+}
+.success {
+  background: #5cb85c;
+}
+.warning {
+  background: #f0ad4e;
+}
