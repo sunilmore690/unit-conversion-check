@@ -34,3 +34,5 @@ exports.r2c = (value)=>{
 //cups liters
 exports.cups2liters = (value)=>value/4.227
 exports.liters2cups = (value)=>value*4.227
+exports.liters2gallon = (value)=>value/3.785
+exports.gallon2liters = (value) => value * 3.785;

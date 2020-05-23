@@ -18,7 +18,7 @@ https://arcane-island-79393.herokuapp.com/
 Go to http://localhost:3000
 
 
-#### Run using Docker
+### Run using Docker
 
 Make sure port 3000 is free
 
@@ -26,5 +26,4 @@ $ bash run.sh
 
 Visit http://localhost:3000
 
-### Deploy your app on Heroku
 

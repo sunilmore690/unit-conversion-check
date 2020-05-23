@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 var serveStatic = require("serve-static");
 const cors = require("cors");
 
-const {f2c,f2k,f2r,r2c,r2f,r2k,c2f,c2k,c2r,cups2liters,k2c,k2f,k2r,liters2cups} = require('./conversion')
+const {f2c,f2k,f2r,r2c,r2f,r2k,c2f,c2k,c2r,cups2liters,k2c,k2f,k2r,liters2cups,liters2gallon,gallon2liters} = require('./conversion')
 let app = express();
 app.use(cors());
 app.set("port", process.env.PORT || 3000);
@@ -36,6 +36,12 @@ const conversion = {
   },
   liters: {
     cups: liters2cups,
+  },
+  gallons: {
+    liters: liters2gallon,
+  },
+  liters: {
+    gallons: gallon2liters
   },
 };
 app.post("/checkconversion", (req, res, next) => {

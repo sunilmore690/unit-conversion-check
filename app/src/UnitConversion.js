@@ -48,10 +48,10 @@ class ConversionCheck extends Component {
     }
     return (
       <div className="row container">
-        <div>
-          <h4>Unit Conversion Check</h4>
-        </div>
-        <div className="col-sm-6">
+        <div className="col-sm-6 col-sm-offset-2">
+          <div>
+            <h4>Unit Conversion Check</h4>
+          </div>
           <div className="form-group">
             <label>Input Value:</label>
             <input
@@ -68,7 +68,7 @@ class ConversionCheck extends Component {
               className="form-control"
               onChange={this.handleChange("srcUnit")}
             >
-              {this.state.units.map(unit => (
+              {this.state.units.map((unit) => (
                 <option key={unit} value={unit}>
                   {unit}
                 </option>
@@ -83,8 +83,8 @@ class ConversionCheck extends Component {
               value={this.state.destUnit}
             >
               {this.state.units
-                .filter(unit => unit !== this.state.srcUnit)
-                .map(unit => (
+                .filter((unit) => unit !== this.state.srcUnit)
+                .map((unit) => (
                   <option key={unit} value={unit}>
                     {unit}
                   </option>
@@ -109,12 +109,18 @@ class ConversionCheck extends Component {
             Check
           </button>
         </div>
-        <div className="col-sm-6">
-          {this.state.result ? (<>
-            <div className={appendClass}>
-              <span>{this.state.result}</span>
-            </div>
-          <div style={{marginLeft:'50px',marginTop:'10px'}}>{this.state.result === 'incorrect'? 'Expected Output: '+this.state.output:''}</div></>
+        <div className="col-sm-4">
+          {this.state.result ? (
+            <>
+              <div className={appendClass}>
+                <span>{this.state.result}</span>
+              </div>
+              <div style={{ marginLeft: "50px", marginTop: "10px" }}>
+                {this.state.result === "incorrect"
+                  ? "Expected Output: " + this.state.output
+                  : ""}
+              </div>
+            </>
           ) : (
             <></>
           )}
